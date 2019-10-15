@@ -14,7 +14,7 @@
 
 <body>
  <fieldset style="width: 30%;">
- <form action="/pagina-processa-dados-do-form" method="post">
+ <form id = "myform" action="/pagina-processa-dados-do-form" method="post">
 
       <div>
         <label for="nome">Nome:</label>
@@ -53,13 +53,18 @@
             </div>
           </td>
           <td>
-            <div class="button">
-              <button type="submit">Limpar</button>
+            <input type = "button" onclick="myFunction()"
+            value = "Limpar">
             </div>
           </td>
         </tr>
       </table>
     </form>
+    <script> 
+    function myFunction(){
+      document.getElementById("myform").reset();
+    }
+    </script>
   </fieldset>
 </body>
 </html>
